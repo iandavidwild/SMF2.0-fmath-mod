@@ -19,6 +19,7 @@
         <readme parsebbc="true">readme/english.txt</readme>
         <require-dir name="Sources" destination="$boarddir"/>
         <require-dir name="Themes-2.0/default" destination="$boarddir/Themes"/>
+		<require-dir name="Sources/fMath" destination="$boarddir/fMath"/>
         <modification>modification.xml</modification>
         <code>hooks.php</code>
     </install>
@@ -26,21 +27,7 @@
     <uninstall for="2.0 - 2.0.99">
         <remove-file name="$sourcedir/Mod-fMath.php"/>
         <remove-file name="$imagesdir/bbc/fmath.gif"/>
-        <modification reverse="true">modification.xml</modification>
-        <code>hooks.php</code>
-    </uninstall>
-
-    <install for="2.1 Beta 2, 2.1 - 2.1.99">
-        <readme parsebbc="true">readme/english.txt</readme>
-        <require-dir name="Sources" destination="$boarddir"/>
-        <require-dir name="Themes-2.1/default" destination="$boarddir/Themes"/>
-        <modification>modification.xml</modification>
-        <code>hooks.php</code>
-    </install>
-
-    <uninstall for="2.1 Beta 2, 2.1 - 2.1.99">
-        <remove-file name="$sourcedir/Mod-fMath.php"/>
-        <remove-file name="$imagesdir/bbc/fmath.png"/>
+		<remove-dir name="$boarddir/fMath"/>
         <modification reverse="true">modification.xml</modification>
         <code>hooks.php</code>
     </uninstall>
