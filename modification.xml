@@ -7,21 +7,10 @@
     <version>0.0.1</version>
     <type>modification</type>
 
-    <file name="$themedir/Post.template.php">
-        <operation>
-            <search position="after"><![CDATA[				if (typeof(smf_codeFix) != \'undefined\')]]></search>
-            <add><![CDATA[
-				// fMath code here!!!
-
-]]></add>
-        </operation>
-    </file>
-
     <file name="$themedir/scripts/editor.js">
         <operation>
             <search position="after"><![CDATA[smc_Editor.prototype.getSelect = function(bWantText, bWantHTMLText)]]></search>
-            <add><![CDATA[		
-				
+            <add><![CDATA[			
 smc_Editor.prototype.insertfMath = function()
 {
 	// display fMath editor
@@ -29,7 +18,7 @@ smc_Editor.prototype.insertfMath = function()
 		fmathWindow.close();
 	}
 	
-	window.fmathWindow = window.open("http://forum.localhost/fmath/fmathEditor.html", "fmath", "toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=815,height=540,resizable=0");
+	window.fmathWindow = window.open(window.location.protocol+'//'+window.location.hostname+'//fmath/fmathEditor.html', 'fmath', 'toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=815,height=540,resizable=0');
 	
 	window.fmathWindow.addEventListener('load',
 			function(e) {
@@ -50,46 +39,6 @@ smc_Editor.prototype.insertfMath = function()
 	// Only one math editor allowed so store handle to message editor globally.
 	window.mathTextHandle = this.oTextHandle;
 }
-
-
-]]></add>
-        </operation>
-    </file>
-	
-    <file name="$themedir/scripts/editor.js">
-        <operation>
-            <search position="before"><![CDATA[smc_Editor.prototype.getSelect = function(bWantText, bWantHTMLText)]]></search>
-            <add><![CDATA[		
-				
-smc_Editor.prototype.insertfMath = function()
-{
-	// display fMath editor
-	if(window.fmathWindow) {
-		fmathWindow.close();
-	}
-	
-	window.fmathWindow = window.open("http://forum.localhost/fmath/fmathEditor.html", "fmath", "toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=815,height=540,resizable=0");
-	
-	window.fmathWindow.addEventListener('load',
-			function(e) {
-				// pre-populate the fMath editor?
-				var sText = '';
-				messageEl = window.document.getElementById('message');
-				sText = messageEl.value.slice(messageEl.selectionStart, messageEl.selectionEnd);
-				
-				if (sText.length != 0) {
-					// strip [latex=inline] and [/latex] tags
-					sClean = sText.replace("[latex=inline]","");
-					sClean = sClean.replace("[/latex]", "")
-					window.fmathWindow.setLatex(sClean);
-				}	
-			},
-			true);
-	
-	// Only one math editor allowed so store handle to message editor globally.
-	window.mathTextHandle = this.oTextHandle;
-}
-
 
 ]]></add>
         </operation>
@@ -97,9 +46,9 @@ smc_Editor.prototype.insertfMath = function()
 	
 	<file name="$themedir/scripts/editor.js">
         <operation>
-            <search position="after"><![CDATA[this[this.oSmfExec[oButtonProperties.sCode]]();]]></search>
+            <search position="before"><![CDATA[this[this.oSmfExec[oButtonProperties.sCode]]();]]></search>
             <add><![CDATA[		
-else if (oButtonProperties.sCode == 'fMath')
+    else if (oButtonProperties.sCode == 'fMath')
 		this.insertfMath();
 
 ]]></add>
