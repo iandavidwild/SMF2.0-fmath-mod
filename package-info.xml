@@ -17,9 +17,9 @@
 
     <install for="2.0 - 2.0.99">
         <readme parsebbc="true">readme/english.txt</readme>
-        <require-dir name="Sources" destination="$boarddir"/>
+        <require-file name="Sources/Mod-fMath.php" destination="$sourcedir"/>
         <require-dir name="Themes-2.0/default" destination="$boarddir/Themes"/>
-		<require-dir name="Sources/fMath" destination="$boarddir/fMath"/>
+		<require-dir name="Sources/fMath" destination="$boarddir"/>
         <modification>modification.xml</modification>
         <code>hooks.php</code>
     </install>
