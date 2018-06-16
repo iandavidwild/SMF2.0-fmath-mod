@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	This is a simplified package manifest for SMF packages.
+
+	ATTENTION: If you are trying to install this manually, you should try
+	the package manager.  If it will not work for you, please take a look
+	at the following for information on this format:
+		http://mods.simplemachines.org/docs/manual-install.php
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<package-info xmlns="http://www.simplemachines.org/xml/package-info">
+    <id>lumina:fmath</id>
+    <name>fMath</name>
+    <version>0.0.1</version>
+    <type>modification</type>
+
+    <install for="2.0 - 2.0.99">
+        <readme parsebbc="true">readme/english.txt</readme>
+        <require-dir name="Sources" destination="$boarddir"/>
+        <require-dir name="Themes-2.0/default" destination="$boarddir/Themes"/>
+        <modification>modification.xml</modification>
+        <code>hooks.php</code>
+    </install>
+
+    <uninstall for="2.0 - 2.0.99">
+        <remove-file name="$sourcedir/Mod-fMath.php"/>
+        <remove-file name="$imagesdir/bbc/fmath.gif"/>
+        <modification reverse="true">modification.xml</modification>
+        <code>hooks.php</code>
+    </uninstall>
+
+    <install for="2.1 Beta 2, 2.1 - 2.1.99">
+        <readme parsebbc="true">readme/english.txt</readme>
+        <require-dir name="Sources" destination="$boarddir"/>
+        <require-dir name="Themes-2.1/default" destination="$boarddir/Themes"/>
+        <modification>modification.xml</modification>
+        <code>hooks.php</code>
+    </install>
+
+    <uninstall for="2.1 Beta 2, 2.1 - 2.1.99">
+        <remove-file name="$sourcedir/Mod-fMath.php"/>
+        <remove-file name="$imagesdir/bbc/fmath.png"/>
+        <modification reverse="true">modification.xml</modification>
+        <code>hooks.php</code>
+    </uninstall>
+
+</package-info>

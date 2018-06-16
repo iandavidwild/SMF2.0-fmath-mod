@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification">
+
+    <id>lumina:fmath</id>
+    <name>fMath</name>
+    <version>0.0.1</version>
+    <type>modification</type>
+
+    <file name="$themedir/Post.template.php">
+        <operation>
+            <search position="after"><![CDATA[				if (typeof(smf_codeFix) != \'undefined\')]]></search>
+            <add><![CDATA[
+				// fMath code here!!!
+
+]]></add>
+        </operation>
+    </file>
+
+    <file name="$themedir/scripts/editor.js">
+        <operation>
+            <search position="after"><![CDATA[		// Show this message as 'modified on x by y'.]]></search>
+            <add><![CDATA[		
+				// fMath code here!!!
+]]></add>
+        </operation>
+    </file>
+
+</modification>

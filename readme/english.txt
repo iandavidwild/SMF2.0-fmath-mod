@@ -1,0 +1,3 @@
+[center][b]fMath[/b][/center]
+
+This mod integrates the fMath editor into an SMF forum.
