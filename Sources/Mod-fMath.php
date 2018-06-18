@@ -44,7 +44,7 @@ function loadfMathJs()
 function addfMathBbcButton(&$buttons)
 {
     $buttons[1][] = array(
-        'image' => 'fMath',
+        'image' => 'fmath',
         'code' => 'fMath',
         'before' => '[latex]',
         'after' => '[/latex]',
@@ -76,6 +76,6 @@ function addfMathCopyright()
     global $context;
 
     if ($context['current_action'] == 'credits') {
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.net/mods/fmath" title="SMF fMath Mod" target="_blank">fMath Editor for SMF</a> &copy; 2018, Lumina Consultancy | <a href="http://www.fmath.info" title="Powered by fMath" target="_blank">Powered by fMath</a>';
+        $context['copyrights']['mods'][] = '<a href="https://github.com/iandavidwild/SMF2.0-fmath-mod" title="SMF fMath Mod" target="_blank">fMath Editor for SMF</a> &copy; 2018, Lumina Consultancy | <a href="http://www.fmath.info" title="Powered by fMath" target="_blank">Powered by fMath</a>';
     }
 }
