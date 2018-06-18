@@ -18,7 +18,7 @@ smc_Editor.prototype.insertfMath = function()
 		fmathWindow.close();
 	}
 	
-	window.fmathWindow = window.open(window.location.protocol+'//'+window.location.hostname+'/fMath/fmathEditor.html', 'fmath', 'toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=817,height=575,resizable=0');
+	window.fmathWindow = window.open(window.location.protocol+'//'+window.location.hostname+'/fMath/fMathEditor.html', 'fmath', 'toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=817,height=575,resizable=0');
 	
 	window.fmathWindow.addEventListener('load',
 			function(e) {
