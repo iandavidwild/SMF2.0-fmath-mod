@@ -18,7 +18,8 @@ smc_Editor.prototype.insertfMath = function()
 		fmathWindow.close();
 	}
 	
-	window.fmathWindow = window.open(window.location.protocol+'//'+window.location.hostname+'/fMath/fMathEditor.html', 'fmath', 'toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=817,height=575,resizable=0');
+	window.fmathWindow = window.open(window.location.protocol+'//'+window.location.hostname+'//fmath/fmathEditor.html?open=' + encodeURIComponent(fmath_opentag) + '&inline=' + encodeURIComponent(fmath_inlineopentag)+ '&close='+ encodeURIComponent(fmath_closetag), 'fmath', 'toolbar=0,location=0,status=no,menubar=0,scrollbars=0,width=817,height=604,resizable=0');
+	
 	
 	window.fmathWindow.addEventListener('load',
 			function(e) {
@@ -28,9 +29,10 @@ smc_Editor.prototype.insertfMath = function()
 				sText = messageEl.value.slice(messageEl.selectionStart, messageEl.selectionEnd);
 				
 				if (sText.length != 0) {
-					// strip [latex=inline] and [/latex] tags
-					sClean = sText.replace("[latex=inline]","");
-					sClean = sClean.replace("[/latex]", "")
+					// strip opening and closing tags
+					sClean = sText.replace(fmath_opentag,"");
+					sClean = sClean.replace(fmath_inlineopentag, "");
+					sClean = sClean.replace(fmath_closetag, "");
 					window.fmathWindow.setLatex(sClean);
 				}	
 			},
