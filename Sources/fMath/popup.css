@@ -38,3 +38,13 @@ div#fMath-form {
 	padding: 15px;
 }
 
+div#fMath-inline {
+	text-align: center;
+}
+div#inline-heading {
+	display: inline-block;
+}
+div#inline-check {
+    display: inline-block;
+}
+
