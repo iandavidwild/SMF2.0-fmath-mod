@@ -80,7 +80,29 @@
 	    //
 	    // Escape the expression
 	    //
-	    var text = '[latex=inline]' + text + '[/latex]';
+	    var url = new URL(window.location.href);
+	    
+	    var open_tag = decodeURIComponent(url.searchParams.get("open"));
+	    if (open_tag == '') {
+            open_tag = '[latex]'
+        }
+        
+	    var inline_tag = decodeURIComponent(url.searchParams.get("inline"));
+	    if (inline_tag == '') {
+	    	inline_tag = '[latex=inline]'
+        }
+        
+	    // is this inline LaTeX?
+	    if (document.getElementById("inlineCheck").checked) {
+	       open_tag=inline_tag;
+	    }
+	    
+	    var close_tag = decodeURIComponent(url.searchParams.get("close"));
+        if (close_tag == '') {
+            close_tag = '[/latex]'
+        }
+        
+	    var text = open_tag + text + close_tag;
 	    insert(text);
 	}
 	
@@ -90,7 +112,9 @@
     }
 	
 </script>
-
+<div id='fMath-inline'>
+    <div id='inline-heading'>Inline: </div><input id = "inlineCheck" type="checkbox" name="inline">
+</div>
 <div id='fMath-form'>
     <button type="button" class="button" onclick="return getLatexAndInsert();">Insert</button>
     <button type="button" class="button" onclick="return cancel();">Cancel</button>
