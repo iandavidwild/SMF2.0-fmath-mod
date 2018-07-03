@@ -28,7 +28,7 @@
     <uninstall for="2.0 - 2.0.99">
         <remove-file name="$sourcedir/Mod-fMath.php"/>
         <remove-file name="$languagedir/fmath.english.php"/>
-		<remove-file name="$imagesdir/bbc/fmath.gif"/>
+		<remove-file name="$imagesdir/bbc/fMath.gif"/>
 		<remove-dir name="$boarddir/fmath"/>
         <modification reverse="true">modification.xml</modification>
         <code>hooks.php</code>
