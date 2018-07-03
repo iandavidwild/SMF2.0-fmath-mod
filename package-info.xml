@@ -20,7 +20,7 @@
         <require-file name="Sources/Mod-fMath.php" destination="$sourcedir"/>
         <require-file name="Sources/fmath.english.php" destination="$languagedir"/>
 		<require-dir name="Themes-2.0/default" destination="$boarddir/Themes"/>
-		<require-dir name="Sources/fMath" destination="$boarddir"/>
+		<require-dir name="Sources/fmath" destination="$boarddir"/>
 		<modification>modification.xml</modification>
         <code>hooks.php</code>
     </install>
@@ -29,7 +29,7 @@
         <remove-file name="$sourcedir/Mod-fMath.php"/>
         <remove-file name="$languagedir/fmath.english.php"/>
 		<remove-file name="$imagesdir/bbc/fmath.gif"/>
-		<remove-dir name="$boarddir/fMath"/>
+		<remove-dir name="$boarddir/fmath"/>
         <modification reverse="true">modification.xml</modification>
         <code>hooks.php</code>
     </uninstall>
