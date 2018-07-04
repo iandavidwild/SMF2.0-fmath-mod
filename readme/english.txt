@@ -4,15 +4,13 @@ This mod integrates the fMath editor into an SMF forum (see below for more detai
 
 Tested on version 2.0.15
 
-[url=https://github.com/iandavidwild/SMF2.0-fmath-mod]fMath SMF mod support pages on GitHub[/url]
+[url=https://github.com/iandavidwild/SMF2.0-fmath-mod/wiki]fMath SMF mod support pages on GitHub[/url]
 
 [b]Installation[/b]
 
-This mod contains a large number of files (alphabets, symbols, etc) and so may take a long while to install. Modify your php.ini file to increase the 'max_execution_time' (remembering to set it back again after installation).
+This mod is only a wrapper for the fMath editor, which contains a large number of files (fonts, symbols, etc) and so is distributed separately. After installing this mod you will need to download the fMath editor files and copy them over to your server. 
 
-[b]Styling[/b]
-
-Once installed, a style sheet (called 'popup.css') for the pop-up window is located in the /fMath folder. Only basic styling is provided and it is expected that you would style the editor for your own site.
+[url=https://github.com/iandavidwild/SMF2.0-fmath-editor/wiki]Follow this link for download and installation instructions[/url]
 
 [hr]
 [b]About fMath[/b]
