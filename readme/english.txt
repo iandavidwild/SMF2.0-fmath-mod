@@ -14,11 +14,12 @@ This mod is only a wrapper for the fMath editor, which contains a large number o
 
 [hr]
 [b]About fMath[/b]
+
 fMath is a free editor to display and edit equations on web pages, desktop applications or mobile devices using MathML, LaTeX or OMML standards. It is released under the Apache 2.0 licence.
 
 [url=https://www.fmath.info]fMath official site[/url]
 
-## SMF2.0-fmath-mod Acknowledgements
+[b]SMF2.0-fmath-mod Acknowledgements[/b]
 
 Spanish language translation by [url=https://www.simplemachines.org/community/index.php?action=profile;u=322597]Rock Lee[/url]
 
