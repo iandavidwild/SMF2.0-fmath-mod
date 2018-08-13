@@ -20,3 +20,6 @@ fMath is a free editor to display and edit equations on web pages, desktop appli
 
 [fMath official site](https://www.fmath.info)
 
+## SMF2.0-fmath-mod Acknowledgements
+
+Spanish language translation by [Rock Lee](https://www.simplemachines.org/community/index.php?action=profile;u=322597)
