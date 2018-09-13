@@ -35,9 +35,9 @@ function loadfMathJs()
     global $context, $modSettings, $settings;
 
     $context['html_headers'] .= '
-      <script type="text/javascript">var fmath_opentag="'.$modSettings[fmath_opentag].'";
-                                     var fmath_inlineopentag="'.$modSettings[fmath_inlineopentag].'";
-                                     var fmath_closetag="'.$modSettings[fmath_closetag].'";</script>';
+      <script type="text/javascript">var fmath_opentag="'.$modSettings['fmath_opentag'].'";
+                                     var fmath_inlineopentag="'.$modSettings['fmath_inlineopentag'].'";
+                                     var fmath_closetag="'.$modSettings['fmath_closetag'].'";</script>';
 }
 
 /**
